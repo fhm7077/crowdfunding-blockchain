@@ -1,4 +1,4 @@
-# crowdfunding-blockchain
+# Crowdfunding using blockchain
 In my project, I am developing a crowdfunding platform that utilizes blockchain technology. Blockchain, being a decentralized and distributed digital ledger, ensures transparency, security, and immutability throughout the crowdfunding process. By harnessing the power of blockchain, my platform aims to provide a trusted and efficient environment for individuals to raise funds from a wide range of participants.
 
 To implement this platform, I am utilizing various tools and technologies. I use Ganache, a development tool, to set up a local blockchain network for testing and development purposes. Ganache allows me to simulate the behavior of a real blockchain network in a controlled environment.
