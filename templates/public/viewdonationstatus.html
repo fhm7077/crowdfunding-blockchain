@@ -1,0 +1,33 @@
+{% extends 'public/homeindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered table-hover">
+    <tr style="background-color: white;color: #0b2e13">
+      <th>Sl No.</th>
+      <th>Date Entry</th>
+{#      <th>Organization Id</th>#}
+      <th>Organization Name</th>
+      <th>Needed Amount</th>
+      <th>Recieved</th>
+      <th>Target Date</th>
+      <th>Purpose </th>
+{#      <th> </th>#}
+
+    </tr>
+
+      {% for i in data %}
+    <tr>
+      <td >{{ loop.index }}</td>
+      <td width="15%">{{ i['date_entry'] }}</td>
+{#      <td> {{ i['orglid'] }}</td>#}
+      <td> {{ i['name'] }}</td>
+      <td>&nbsp;{{ i['amount'] }}</td>
+      <td>&nbsp;{{ i['ramt'] }}</td>
+      <td>&nbsp;&nbsp;{{ i['needed_beforedate'] }}</td>
+      <td>{{ i['purpose'] }}</td>
+{#      <td>{% if  i['amount']==i['ramt']  %}Donation Reached Max level {% else %}<a href="/userpayment/{{ i['orglid'] }}/{{ i['did'] }}/{{ i['amount'] }}/{{ i['balance'] }}#about" class="btn btn-primary" >Donate</a>{% endif %}</td>#}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

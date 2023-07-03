@@ -1,0 +1,24 @@
+{% extends 'admin/aindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered table-hover" bgcolor="#222">
+    <tr>
+        <th>Sl no.</th>
+      <th>Name</th>
+      <th>Gmail</th>
+      <th>Subject </th>
+      <th>Description</th>
+    </tr>
+
+      {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i['Name'] }}</td>
+      <td>&nbsp;{{ i['email'] }}</td>
+      <td>&nbsp;&nbsp;{{ i['subject'] }}</td>
+      <td>&nbsp;&nbsp;{{ i['description'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

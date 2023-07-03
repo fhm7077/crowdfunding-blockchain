@@ -1,0 +1,32 @@
+{% extends 'public/homeindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/charity_newspost">
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th>Name</th>
+      <td>
+      <input type="text" name="textfield2" id="textfield2" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td>
+      <input type="email" name="textfield3" id="textfield3" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Subject</th>
+      <td>
+      <input type="text" name="textfield4" id="textfield4" class="form-control" required/></td>
+    </tr>
+      <tr>
+      <th>Description</th>
+      <td>
+      <input type="text" name="textfield6" id="textfield6" class="form-control" required/></td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="Submit" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

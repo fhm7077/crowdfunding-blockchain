@@ -1,0 +1,773 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="zxx">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords"
+    content="Sectoral Responsive web template, Bootstrap Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <title>CROWD FUNDING </title>
+  <link href="//fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="/static/home/assets/css/style-starter.css">
+
+    <style>
+
+        html{
+            scroll-behaviour:smooth;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+  <!--header-->
+  <header id="site-header" class="w3lhny-head fixed-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg stroke px-0">
+        <h1> <a class="navbar-brand" href="index.html">
+            <span class="sublog"><span class="fa fa-industry w3llog-icon" aria-hidden="true"></span>   Crowd</span>Funding
+          </a></h1>
+        <!-- if logo is image enable this
+  <a class="navbar-brand" href="#index.html">
+      <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+  </a> -->
+        <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+          <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mx-lg-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/org_home">Home <span class="sr-only">(current)</span></a>
+            </li>
+{#            <li class="nav-item">#}
+{#              <a class="nav-link" href="about.html">About</a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#              <a class="nav-link" href="services.html">Services</a>#}
+{#            </li>#}
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Charity <span class="fa fa-angle-down"></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/addcharity#about">Add</a>
+                <a class="dropdown-item" href="/view_mycharity#about">View my charity</a>
+{#                <a class="dropdown-item" href="/org_view_donations">Donations</a>#}
+                <!--a class="dropdown-item" href="/viewdonationrequest">View</a-->
+              </div>
+            </li>
+              <!--li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Organization Request <span class="fa fa-angle-down"></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/orgviewdonationrequest">View</a>
+                  <a class="dropdown-item" href="/viewandapprove">View and approve pending</a>
+                  <a class="dropdown-item" href="/viewandapprove_accept">View and approve accepted</a>
+                  <a class="dropdown-item" href="/viewandapprove_reject">View and approve rejected</a>
+                <a class="dropdown-item" href="/view_org_approved_donationrequest">View Approved Request</a>
+              </div-->
+            </li>
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Others <span class="fa fa-angle-down"></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/viewprofile_org#about">View Profile</a>
+                <a class="dropdown-item" href="/changepassword_org#about">Change Password</a>
+                  <a class="dropdown-item" href="/logout">Log out</a>
+
+              </div>
+            </li>
+
+{#            <li class="nav-item">#}
+{#              <a class="nav-link" href="contact.html">Contact</a>#}
+{#            </li>#}
+            <!--/search-right-->
+            <nav class="ml-lg-5">
+              <div class="search-bar">
+                <form class="search">
+                  <input type="search" class="search__input" name="search" placeholder="Search here.."
+                    onload="equalWidth()" required>
+                  <span class="fa fa-search search__icon"></span>
+                </form>
+              </div>
+            </nav>
+            <!--//search-right-->
+          </ul>
+        </div>
+        <!-- toggle switch for light and dark theme -->
+        <div class="mobile-position">
+          <nav class="navigation">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="mode-container">
+                  <i class="gg-sun"></i>
+                  <i class="gg-moon"></i>
+                </div>
+              </label>
+            </div>
+          </nav>
+        </div>
+        <!-- //toggle switch for light and dark theme -->
+      </nav>
+    </div>
+  </header>
+  <!--/header-->
+  <!-- main-slider -->
+  <section class="w3l-main-slider" id="home">
+    <div class="companies20-content">
+      <div class="owl-one owl-carousel owl-theme">
+        <div class="item">
+          <li>
+            <div class="slider-info banner-view bg bg2">
+              <div class="banner-info">
+                <div class="container">
+
+                  <div class="banner-info-bg">
+                    <h6>Hi, {{ session["name"] }}</h6>
+                    <h5>Welcome to organization home page </h5>
+                    <!--p class="mt-md-4 mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.Ea
+                      ipsum sed consequuntur illum facere.
+                    </p-->
+                    <a class="btn btn-style btn-outline-light mt-sm-5 mt-4" href="about.html">
+                      Read More <span class="fa fa-arrow-right  ml-3" aria-hidden="true"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="item">
+          <li>
+            <div class="slider-info  banner-view banner-top1 bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg">
+                    <h6>We Provide the best Secured CrowdFunding Platform.</h6>
+                    <h5>Unlock the Power of Blockchain: Support Our Platform. </h5>
+                    <p class="mt-md-4 mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.Ea
+                      ipsum sed consequuntur illum facere.
+                    </p>
+                    <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 " href="about.html">
+                      Read More <span class="fa fa-arrow-right ml-3" aria-hidden="true"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="item">
+          <li>
+            <div class="slider-info banner-view banner-top2 bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg">
+                    <h6>We Provide the best Secured CrowdFunding Platform.</h6>
+                    <h5>Unlock the Power of Blockchain: Support Our Platform. </h5>
+                    <p class="mt-md-4 mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.Ea
+                      ipsum sed consequuntur illum facere.
+                    </p>
+                    <a class="btn btn-style btn-outline-light mt-sm-5 mt-4" href="about.html">
+                      Read More <span class="fa fa-arrow-right  ml-3" aria-hidden="true"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div class="item">
+          <li>
+            <div class="slider-info banner-view banner-top3 bg bg2">
+              <div class="banner-info">
+                <div class="container">
+                  <div class="banner-info-bg">
+                    <h6>We Provide the best Secured CrowdFunding Platform.</h6>
+                    <h5>Unlock the Power of Blockchain: Support Our Platform. </h5>
+                    <p class="mt-md-4 mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.Ea
+                      ipsum sed consequuntur illum facere.
+                    </p>
+                    <a class="btn btn-style btn-outline-light mt-sm-5 mt-4" href="about.html">
+                      Read More <span class="fa fa-arrow-right ml-3" aria-hidden="true"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+      <!--/w3l-industry-address-->
+      <div class="w3l-industry-address">
+        <div class="one-address">
+          <div class="left">
+            <div class="ad-icon">
+              <span class="fa fa-phone"></span>
+            </div>
+          </div>
+          <div class="content">
+            <p>Call Us:</p>
+            <h5>9744701363</h5>
+          </div>
+        </div>
+        <div class="one-address">
+          <div class="left">
+            <div class="ad-icon">
+              <span class="fa fa-envelope-o"></span>
+            </div>
+          </div>
+          <div class="content">
+            <p>Email Us:</p>
+            <h5><a href="mailto:example@mail.com" class="mail">crowdfunding@mail.com</a></h5>
+          </div>
+        </div>
+      </div>
+      <!--//w3l-industry-address-->
+    </div>
+  </section>
+  <!-- /main-slider -->
+  <!--/about-section -->
+  <section class="w3l-index1 py-5" id="about">
+      <div class="container py-lg-5 py-md-3">
+          {% block body %}
+
+          {% endblock %}
+
+        <div class="header-section text-center mx-0 mb-md-5 mb-4">
+          <h6 class="title-subhny">About Our Project</h6>
+          <h3 class="title-w3l mt-2">We Provide the best Secured CrowdFunding Platform</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-lg-0 mb-md-5 mb-4 align-self">
+            <h4 class="title-sub">About the Platform</h4>
+            <p class="mt-md-4 mt-3">Crowdfunding is the technique of raising small amounts of money from a
+                    large number of individuals, usually over the Internet, to fund a project or endeavor.
+                    This crowdfunding application is like no other as it does not transfer the amount which is funded directly to the reciever, rather the amount is stored in a smart contract.</p>
+            <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="about.html">Read More <span class="fa fa-arrow-right ml-2" aria-hidden="true"></span></a>
+          </div>
+          <div class="col-lg-6 pl-lg-5">
+            <div class="position-relative">
+              <img src="/static/home/assets/images/b3.jpg" alt="" class="radius-image img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- //about-section -->
+  <!-- home page block1 -->
+  <!--section id="features" class="home-services py-5">
+    <div class="container py-md-5 py-2">
+      <div class="header-section text-center mx-0 mb-md-5 mb-4">
+        <h6 class="title-subhny">Our Services</h6>
+        <h3 class="title-w3l mt-2">High quality services</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="box-wrap">
+            <div class="box-wrap-grid">
+              <div class="icon">
+                <span class="fa fa-cogs"></span>
+              </div>
+              <div class="info">
+                <h4><a href="#url">Mechanical Works</a></h4>
+              </div>
+            </div>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-md-0 mt-4">
+          <div class="box-wrap">
+            <div class="box-wrap-grid">
+              <div class="icon">
+                <span class="fa fa-cubes"></span>
+              </div>
+              <div class="info">
+                <h4><a href="#url">
+                    Power & Energy</a></h4>
+              </div>
+            </div>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-0 mt-4">
+          <div class="box-wrap">
+            <div class="box-wrap-grid">
+              <div class="icon">
+                <span class="fa fa-map-o"></span>
+              </div>
+              <div class="info">
+                <h4><a href="#url">Petroleum Refinery</a></h4>
+              </div>
+            </div>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+          <div class="box-wrap">
+            <div class="box-wrap-grid">
+              <div class="icon">
+                <span class="fa fa-podcast"></span>
+              </div>
+              <div class="info">
+                <h4><a href="#url">
+                  Research & Analysis</a></h4>
+              </div>
+            </div>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+          <div class="box-wrap">
+            <div class="box-wrap-grid">
+              <div class="icon">
+                <span class="fa fa-sitemap"></span>
+              </div>
+              <div class="info">
+                <h4><a href="#url">
+                  Bridge Construction</a></h4>
+              </div>
+            </div>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+          <div class="box-wrap">
+            <div class="box-wrap-grid">
+              <div class="icon">
+                <span class="fa fa-industry"></span>
+              </div>
+              <div class="info">
+                <h4><a href="#url">
+                  Industrial Chemicals</a></h4>
+              </div>
+            </div>
+            <p class="mt-3">Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //home page block1 -->
+  <!--section class="w3l-index2" id="about1">
+    <div class="midd-w3 py-5">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row">
+          <div class="col-lg-6 left-wthree-img">
+            <div class="position-relative">
+              <img src="/static/home/assets/images/b2.jpg" alt="" class="radius-image img-fluid">
+
+            </div>
+          </div>
+          <div class="col-lg-6 mt-lg-0 mt-5 pl-lg-5 align-self">
+            <h6 class="title-subhny">What We Offer</h6>
+            <h3 class="title-w3l mt-2">Planning and design.
+              Modern equipment.</h3>
+            <p class="mt-4">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+              ultrices in ligula. Semper at tempufddfel. Learn more about our work!
+              Lorem ipsum viverra feugiat.
+            </p>
+            <ul class="w3l-right-book mt-4">
+              <li><span class="fa fa-check" aria-hidden="true"></span>Pellen tesque libero ut justo</li>
+              <li><span class="fa fa-check" aria-hidden="true"></span>Lorem ipsum dolor sit amet elit</li>
+              <li><span class="fa fa-check" aria-hidden="true"></span>Pellen tesque libero ut justo</li>
+            </ul>
+            <a class="btn btn-style btn-primary mt-4" href="about.html">Read More <span class="fa fa-arrow-right ml-2" aria-hidden="true"></span></a>
+          </div>
+
+        </div>
+        <div class="row mt-5 pt-lg-4">
+
+          <div class="col-lg-6 mb-lg-0 mb-5 pr-lg-5 align-self">
+            <h6 class="title-subhny">Why Choose Us</h6>
+            <h3 class="title-w3l mt-2">Dream big with get more inspiring solutions from here.</h3>
+            <p class="mt-4">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+              ultrices in ligula. Semper at tempufddfel. Learn more about our work!
+              Lorem ipsum viverra feugiat.
+            </p>
+            <ul class="w3l-right-book mt-4">
+              <li><span class="fa fa-check" aria-hidden="true"></span>Pellen tesque libero ut justo</li>
+              <li><span class="fa fa-check" aria-hidden="true"></span>Lorem ipsum dolor sit amet elit</li>
+              <li><span class="fa fa-check" aria-hidden="true"></span>Pellen tesque libero ut justo</li>
+            </ul>
+            <a class="btn btn-style btn-primary mt-4" href="about.html">Read More <span class="fa fa-arrow-right ml-2" aria-hidden="true"></span></a>
+          </div>
+          <div class="col-lg-6 left-wthree-img">
+            <div class="position-relative">
+              <img src="/static/home/assets/images/b1.jpg" alt="" class="radius-image img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- home page block grids -->
+   <!-- /content-6-section -->
+   <section class="w3l-content-mid py-5">
+    <!-- /content-6-section -->
+    <div class="content-4-main py-3">
+      <div class="container py-lg-4">
+        <div class="welcome-left text-left">
+          <h6 class="title-subhny mb-2">Call Us</h6>
+          <h3 class="title-w3l">We believe in building long lasting our funding relationships.</h3>
+          <p class="mt-3 mb-lg-2 pr-lg-5">You can connect us at anytime.
+          </p>
+          <a href="tel:+91 97447 01363" class="btn btn-style btn-primary mt-4">+91 97447 01363</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //content-6-section -->
+  <!-- home page block grids -->
+  <!--section class="w3l-text-11 py-5" id="blogs">
+    <div class="container py-lg-5 py-md-4 py-2">
+      <div class="header-section text-center mx-0 mb-md-5 mb-4">
+        <h6 class="title-subhny">Latest Articles </h6>
+        <h3 class="title-w3l mt-2">Top Blog Posts</h3>
+      </div>
+      <div class="row text11-content">
+        <div class="col-md-4 item mt-lg-0">
+          <div class="card">
+            <div class="card-header p-0 position-relative border-0">
+              <a href="#">
+                <img class="card-img-bottom d-block radius-image" src="/static/home/assets/images/b1.jpg" alt="Card image cap">
+              </a>
+            </div>
+            <div class="card-body p-0 blog-details">
+              <h6 class="mt-4">Jan 02, 2021</h6>
+              <a href="#admin" class="admin">- by Admin </a>
+              <br>
+              <a href="#" class="blog-desc">Importers achieve cost savings through the First Sale rule!.</a>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum.</p>
+              <a href="#" class="btn btn-style btn-primary mt-lg-4 mt-4">Read More <span class="fa fa-arrow-right ml-2" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 item mt-lg-0 mt-5">
+          <div class="card">
+            <div class="card-header p-0 position-relative border-0">
+              <a href="#">
+                <img class="card-img-bottom d-block radius-image" src="/static/home/assets/images/b3.jpg" alt="Card image cap">
+              </a>
+            </div>
+            <div class="card-body p-0 blog-details">
+              <h6 class="mt-4">Jan 02, 2021</h6>
+              <a href="#admin" class="admin">- by Admin </a>
+              <br>
+              <a href="#" class="blog-desc">Cargo flow through better supply chain visibility, control.</a>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum.</p>
+              <a href="#" class="btn btn-style btn-primary mt-lg-4 mt-4">Read More <span class="fa fa-arrow-right ml-2" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 item mt-lg-0 mt-5">
+          <div class="card">
+            <div class="card-header p-0 position-relative border-0">
+              <a href="#">
+                <img class="card-img-bottom d-block radius-image" src="/static/home/assets/images/b6.jpg" alt="Card image cap">
+              </a>
+            </div>
+            <div class="card-body p-0 blog-details">
+              <h6 class="mt-4">Jan 02, 2021</h6>
+              <a href="#admin" class="admin">- by Admin </a>
+              <br>
+              <a href="#" class="blog-desc">Importers achieve cost savings through the First Sale rule!.</a>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum.</p>
+              <a href="#" class="btn btn-style btn-primary mt-lg-4 mt-4">Read More <span class="fa fa-arrow-right ml-2" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //home page block grids -->
+  <!-- stats -->
+  <!--section class="w3l-stats py-5">
+    <div class="container py-3">
+      <div class="header-section text-center mx-0 mb-md-5 mb-4">
+        <h6 class="title-subhny two">Our Stats </h6>
+        <h3 class="title-w3l two mt-2">We believe in building long lasting
+          <br>our business relationships.</h3>
+      </div>
+      <div class="row img-w3-content no-gutters">
+        <div class="col-lg-6 img-right p-lg-0">
+          <img src="/static/home/assets/images/ab1.jpg" alt="" class="radius-image img-fluid">
+        </div>
+        <div class="col-lg-6 stats-left">
+          <div class="row stats-con">
+            <div class="col-4 stats_info counter_grid">
+              <p class="counter">1500 </p>
+              <h4>Projects</h4>
+            </div>
+            <div class="col-4 stats_info counter_grid ">
+              <p class="counter">1160</p>
+              <h4>Employees</h4>
+            </div>
+            <div class="col-4 stats_info counter_grid2 ">
+              <p class="counter">1145 </p>
+              <h4>
+                Clients</h4>
+            </div>
+            <p class="mt-2 mb-3">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+              ultrices in ligula. Semper at tempufddfel.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae voluptatum.Semper at tempufddfe.
+            </p>
+            <a class="btn btn-style btn-primary mt-4" href="about.html">Read More <span class="fa fa-arrow-right ml-2" aria-hidden="true"></span></a>
+          </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- //testimonials section -->
+  <!-- footer-28 block -->
+  <footer class="footer-28 position-relative py-5">
+    <div class="container py-lg-3">
+
+              </div>
+
+      <div class="row footer-top-28 mt-4">
+        <div class="col-lg-5 footer-list-28 pr-lg-5 mt-5">
+          <h6 class="footer-title-28">Quick Contact</h6>
+          <p class="pr-lg-5">Connect us at.</p>
+
+          <div class="main-social-footer-28 mt-4">
+            <ul class="social-icons">
+              <li class="facebook">
+                <a href="#link" title="Facebook">
+                  <span class="fa fa-facebook" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li class="twitter">
+                <a href="#link" title="Twitter">
+                  <span class="fa fa-twitter" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li class="dribbble">
+                <a href="#link" title="Dribbble">
+                  <span class="fa fa-dribbble" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li class="google">
+                <a href="#link" title="Google">
+                  <span class="fa fa-google" aria-hidden="true"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 footer-list-28 mt-5">
+              <h6 class="footer-title-28">Quick Links</h6>
+              <ul>
+                <li><a href="org_home"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Home</a></li>
+                <li><a href=""><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> About us</a></li>
+                <li><a href=""><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Services</a></li>
+                <li><a href=""><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Charity News</a></li>
+                <li><a href=""><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-5 col-sm-6 footer-list-28 mt-5">
+              <h6 class="footer-title-28">Our Services</h6>
+              <ul>
+                <li><a href="addcharity"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Add charity</a></li>
+                <li><a href="viewprofile_org"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> View Profile</a></li>
+                <li><a href="changepassword_org"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Change password</a></li>
+                <li><a href="/"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Log out</a></li>
+                <!--li><a href="#automotive"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Automotive & System</a></li-->
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-6 footer-list-28 mt-5">
+              <h6 class="footer-title-28">Help</h6>
+              <ul>
+                <li><a href="#privacy"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Privacy policy</a></li>
+                <li><a href="#support"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Support</a></li>
+                <li><a href="#terms"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> Terms & conditions</a></li>
+                <li><a href="#license"><span class="fa fa-arrow-right mr-2" aria-hidden="true"></span> License and uses</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="midd-footer-28 align-center py-4 mt-5">
+        <p class="copy-footer-28 text-center"> &copy; MES S8 IT PROJECT BATCH 5
+
+      </div>
+
+
+
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      &#10548;
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+    <!-- //footer-28 block -->
+  </footer>
+
+  <!-- Template JavaScript -->
+  <script src="/static/home/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/static/home/assets/js/theme-change.js"></script>
+  <!-- owlcarousel -->
+  <!-- owl carousel-->
+  <script src="/static/home/assets/js/owl.carousel.js"></script>
+  <!-- script for banner slider-->
+  <script>
+    $(document).ready(function ()  {
+      $('.owl-one').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        responsiveClass: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplaySpeed: 1000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          480: {
+            items: 1
+          },
+          667: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //script -->
+  <!-- script for tesimonials carousel slider -->
+  <script>
+    $(document).ready(function () {
+      $("#owl-demo2").owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 50,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          736: {
+            items: 1,
+            nav: false
+          },
+          991: {
+            items: 2,
+            margin: 30,
+            nav: false
+          },
+          1080: {
+            items:3,
+            nav: false
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //script for tesimonials carousel slider -->
+  <!-- owl carousel -->
+
+  <!-- script for tesimonials carousel slider -->
+  <script>
+    $(document).ready(function () {
+      $("#owl-demo2").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          1000: {
+            items: 1,
+            nav: false,
+            loop: false
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //script for tesimonials carousel slider -->
+  <!-- stats number counter-->
+  <script src="/static/home/assets/js/jquery.waypoints.min.js"></script>
+  <script src="/static/home/assets/js/jquery.countup.js"></script>
+{#  <script>#}
+{#    $('.counter').countUp();#}
+{#  </script>#}
+  <!-- //stats number counter -->
+  <!--/MENU-JS-->
+{#  <script>#}
+{#    $(window).on("scroll", function () {#}
+{#      var scroll = $(window).scrollTop();#}
+{##}
+{#      if (scroll >= 80) {#}
+{#        $("#site-header").addClass("nav-fixed");#}
+{#      } else {#}
+{#        $("#site-header").removeClass("nav-fixed");#}
+{#      }#}
+{#    });#}
+{##}
+{#    //Main navigation Active Class Add Remove#}
+{#    $(".navbar-toggler").on("click", function () {#}
+{#      $("header").toggleClass("active");#}
+{#    });#}
+{#    $(document).on("ready", function () {#}
+{#      if ($(window).width() > 991) {#}
+{#        $("header").removeClass("active");#}
+{#      }#}
+{#      $(window).on("resize", function () {#}
+{#        if ($(window).width() > 991) {#}
+{#          $("header").removeClass("active");#}
+{#        }#}
+{#      });#}
+{#    });#}
+{#  </script>#}
+  <!--//MENU-JS-->
+
+  <script src="/static/home/assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

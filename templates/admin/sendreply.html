@@ -1,0 +1,17 @@
+{% extends 'admin/aindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/sendreplypost">
+  <table class="table table-bordered table-hover" bgcolor="#222">
+    <tr>
+      <th height="63">Reply</th><input type="hidden" name="id" value="{{ id }}">
+      <td>
+      <input type="text" name="textfield" id="textfield" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="SEND" class="btn btn-success"/></td>
+    </tr>
+  </table>
+</form>
+
+{% endblock %}

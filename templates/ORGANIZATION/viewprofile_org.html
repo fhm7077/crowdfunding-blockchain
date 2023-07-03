@@ -1,0 +1,39 @@
+{% extends 'organization/orgindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th>name</th>
+      <td>{{ data['name'] }}</td>
+    </tr>
+    <tr>
+      <th>place</th>
+      <td>{{ data['place'] }}</td>
+    </tr>
+    <tr>
+      <th>city</th>
+      <td>&nbsp;{{ data['city'] }}</td>
+    </tr>
+    <tr>
+      <th>state</th>
+      <td>{{ data['state'] }}</td>
+    </tr>
+    <tr>
+      <th>email</th>
+      <td>&nbsp;{{ data['email'] }}</td>
+    </tr>
+    <tr>
+      <th>aboutus</th>
+      <td>&nbsp;{{ data['aboutus'] }}</td>
+    </tr>
+    <tr>
+      <th>estd</th>
+      <td>&nbsp;{{ data['estd'] }}</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><a href="/editprofileorg" onclick="return confirm('are you sure?')">edit profile?</a></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

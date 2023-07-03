@@ -1,0 +1,35 @@
+{% extends 'admin/aindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/viewdonationrequest">
+  <table class="table table-bordered table-hover" bgcolor="#222">
+    <tr>
+      <th>Sno</th>
+      <th>Date entry</th>
+      <th>Amount</th>
+      <th>Target date</th>
+      <th>Purpose</th>
+      <th>Description</th>
+      <th colspan="3">Status</th>
+
+
+
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td >&nbsp;{{ loop.index }}</td>
+      <td>{{ i['date_entry'] }}</td>
+      <td>{{ i['amount'] }}</td>
+      <td>&nbsp;{{ i['needed_beforedate'] }}</td>
+      <td>&nbsp;{{ i['purpose'] }}</td>
+      <td>&nbsp;{{ i['description'] }}</td>
+      <td colspan="2"><a href="/admin_view_donations/{{ i['did'] }}#about" class="btn btn-primary" style="width: 150px" >Donations</a></td>
+        {% if i['status']=='refunddone' %}
+        <td>Refunded</td>
+        {% else %}
+      <td colspan="2"><a href="/admin_donationrefund/{{ i['did'] }}/{{ i["amount"] }}#about" class="btn btn-primary" style="width: 150px" >Refund</a></td>
+    {% endif %}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

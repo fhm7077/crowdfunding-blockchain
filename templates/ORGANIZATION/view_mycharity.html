@@ -1,0 +1,43 @@
+{% extends 'organization/orgindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th></th>
+      <th>Date Entry</th>
+      <th>Amount</th>
+      <th>Target Date</th>
+      <th>Purpose </th>
+      <th>Description</th>
+      <th colspan="2">Status</th>
+      <th colspan="2"></th>
+    </tr>
+
+      {% for i in data %}
+    <tr>
+      <td height="143">&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i['date_entry'] }}</td>
+      <td>&nbsp;{{ i['amount'] }}</td>
+      <td>&nbsp;&nbsp;{{ i['needed_beforedate'] }}</td>
+      <td>&nbsp;&nbsp;{{ i['purpose'] }}</td>
+      <td>&nbsp;&nbsp;{{ i['description'] }}</td>
+      <td colspan="2">{% if i['status']=='approved' or i['status'] == 'refunddone' %}Approved <br><br><a href="/org_view_donations/{{ i['did'] }}#about" class="btn btn-primary" style="width: 150px" >Donations</a>{% else %}{{ i['status'] }}<br><br><a href="/edit_charity/{{ i['did'] }}#about" class="btn btn-primary" style="width: 150px" >Edit charity</a><br><br>
+      <!--a href="" onclick="return confirm('are you sure?')" class="btn btn-danger" style="width: 150px">Delete</a-->  {% endif %}  </td>
+      <td>
+
+          {% if i['status']=='refunddone' %}
+          Refunded
+          {% elif i['status'] == 'pending' %}
+              <a href="/delete_charity/{{ i['did'] }}" onclick="return confirm('are you sure?')" class="btn btn-danger" style="width: 150px">Delete</a>
+          {% else %}
+          <a href="/org_donationrefund/{{ i['did'] }}/{{ i['amount'] }}" class="btn btn-success" style="width: 150px">Refund</a>
+          {% endif %}
+
+
+
+
+      </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>{% endblock %}

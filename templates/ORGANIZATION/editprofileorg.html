@@ -1,0 +1,54 @@
+{% extends 'organization/orgindex.html' %}
+{% block body %}
+
+<form action="/editprofileorgpost" method="post" enctype="multipart/form-data" name="form1" id="form1">
+    <table class="table table-bordered table-hover">
+
+      <tr>
+      <th>name</th>
+      <td>
+      <input type="text" name="textfield2" id="textfield2" value="{{ data["name"] }}" /> </td>
+    </tr>
+
+    <tr>
+      <th>place</th>
+      <td><input type="text" name="textfield3" id="textfield3" value="{{ data["place"] }}" /></td>
+    </tr>
+
+    <tr>
+      <th>city</th>
+      <td>
+      <input type="text" name="textfield4" id="textfield4" value="{{ data["city"] }}" /></td>
+    </tr>
+
+    <tr>
+      <th>state</th>
+      <td>
+      <input type="text" name="textfield5" id="textfield5" value="{{ data["state"] }}" />
+      </td>
+    </tr>
+        <tr>
+      <th>email</th>
+      <td>
+      <input type="text" name="textfield6" id="textfield6" value="{{ data["email"] }}" />
+      </td>
+    </tr>
+            <tr>
+      <th>aboutus</th>
+      <td>
+      <input name="textarea" id="textarea" value="{{ data["aboutus"] }}" />
+      </td>
+    </tr>
+            <tr>
+      <th>estd</th>
+      <td>
+      <input type="text" name="textfield7" id="textfield7" value="{{ data["estd"] }}" />
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="Edit Profile" class="btn btn-success"/></td>
+    </tr>
+  </table>
+  </form>
+{% endblock %}

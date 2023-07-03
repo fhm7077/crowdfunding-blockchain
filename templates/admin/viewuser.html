@@ -1,0 +1,24 @@
+{% extends 'admin/aindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered table-hover" bgcolor="#222">
+    <tr>
+      <th>S .no</th>
+      <th>Name</th>
+      <th>Gmail</th>
+      <th>Phone </th>
+      <th>Photo</th>
+    </tr>
+
+      {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i['name'] }}</td>
+      <td>&nbsp;{{ i['email'] }}</td>
+      <td>&nbsp;&nbsp;{{ i['phone'] }}</td>
+      <td><img src="{{ i['photo'] }}" alt="img" height="80px" width="80px" ></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

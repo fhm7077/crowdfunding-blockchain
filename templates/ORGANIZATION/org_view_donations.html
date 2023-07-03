@@ -1,0 +1,24 @@
+{% extends 'ORGANIZATION/orgindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered table-hover">
+    <tr style="background-color: white;color: #0b2e13">
+      <th>Sl No.</th>
+{#      <th>User Details</th>#}
+      <th>Date Entry</th>
+      <th>Amount</th>
+
+    </tr>
+
+      {% for i in ls %}
+    <tr>
+      <td height="50" width="50">&nbsp;{{ loop.index }}</td>
+{#      <td>{{ i['uname'] }}<br>{{ i['uemail'] }}<br>{{ i['uphone'] }}</td>#}
+      <td>{{ i['datea'] }}</td>
+      <td height="50" width="50">&nbsp;{{ i['amounta'] }}</td>
+    </tr>
+      {% endfor %}
+  <tr><td colspan="8">Total Donations:{{ tot }}</td></tr>
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'organization/orgindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/addcharitypost">
+  <table class="table table-bordered table-hover">
+{#    <tr>#}
+{#      <th>date_entry</th>#}
+{#      <td>#}
+{#      <input type="date" name="textfield" id="textfield" class="form-control" required/></td>#}
+{#    </tr>#}
+    <tr>
+      <th>Amount</th>
+      <td>
+      <input type="text" name="textfield2" id="textfield2" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>needed_beforedate</th>
+      <td>
+      <input type="date" name="textfield3" id="textfield3" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>purpose</th>
+      <td>
+      <input type="text" name="textfield4" id="textfield4" class="form-control" required /></td>
+    </tr>
+          <tr>
+      <th>Description</th>
+      <td>
+      <input type="text" name="textfield5" id="textfield5" class="form-control" required/></td>
+    </tr>
+
+      <tr>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="ADD" class="btn btn-success"/></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

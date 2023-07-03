@@ -1,0 +1,31 @@
+{% extends 'ORGANIZATION/orgindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/org_donationrefundpost">
+  <table class="table table-bordered table">
+    <tr style="background-color: white;color: #0b2e13">
+      <th>Sl No.</th>
+      <th>User Details</th>
+      <th>Date Entry</th>
+      <th>Donated Amount</th>
+
+    </tr>
+
+      {% for i in ls %}
+    <tr>
+      <td width="50" height="50">&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i['account'] }}</td>
+{#      <td>&nbsp;{{ i['uname'] }}<br>{{ i['uemail'] }}<br>{{ i['uphone'] }}<br>{{ i['account'] }}</td>#}
+      <td>&nbsp;{{ i['datea'] }}</td>
+      <td width="50" height="50">&nbsp;{{ i['amounta'] }}</td>
+    </tr>
+      {% endfor %}
+  <tr>
+      <!--td colspan="1">Total Donations:{{ tot }}</td-->
+      <td colspan="1">Total Refund Amount</td>
+      <td>
+          <input type="text" name="textfield2" id="textfield2" class="form-control" required/></td></td>
+          <td><input type="submit" name="button" id="button" value="REFUND" class="btn btn-success"/></td>
+  </tr>
+  </table>
+</form>
+{% endblock %}

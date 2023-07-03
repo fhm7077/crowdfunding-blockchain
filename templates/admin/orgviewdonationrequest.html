@@ -1,0 +1,30 @@
+{% extends 'admin/aindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/viewdonationrequest">
+  <table class="table table-bordered table-hover" bgcolor="#222">
+    <tr>
+      <th>Sno</th>
+      <th>Date entry</th>
+      <th>Organization Name</th>
+      <th>amount</th>
+      <th>Target date</th>
+      <th>Purpose</th>
+      <th>Description</th>
+
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td>{{ i['date_entry'] }}</td>
+      <td>{{ i['name'] }}</td>
+      <td>{{ i['amount'] }}</td>
+      <td>&nbsp;{{ i['needed_beforedate'] }}</td>
+      <td>&nbsp;{{ i['purpose'] }}</td>
+      <td>&nbsp;{{ i['description'] }}</td>
+     <td>  <a href="/approve_org_donation_req/{{ i['did'] }}" class="btn btn-primary" onclick="return confirm('are you sure?')">Approve</a>  </td>
+    <td>   <a href="/rejected_org_donation_req/{{ i['did']  }}" class="btn btn-danger" onclick="return confirm('are you sure?')">Reject</a> </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

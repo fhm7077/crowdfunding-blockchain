@@ -1,0 +1,43 @@
+{% extends 'organization/orgindex.html' %}
+{% block body %}
+
+<form action="/edit_charitypost" method="post" enctype="multipart/form-data" name="form1" id="form1">
+    <table class="table table-bordered">
+
+      <tr>
+      <th>Updated Entry date</th>
+      <td>
+      <input type="date" name="textfield2" id="textfield2" value="{{ data["date_entry"] }}" /> </td>
+    </tr>
+
+    <tr>
+      <th>Amount</th>
+      <td><input type="text" name="textfield3" id="textfield3" value="{{ data["amount"] }}" /></td>
+    </tr>
+
+    <tr>
+      <th>Target Date</th>
+      <td>
+      <input type="date" name="textfield4" id="textfield4" value="{{ data["needed_beforedate"] }}" /></td>
+    </tr>
+
+    <tr>
+      <th>Purpose</th>
+      <td>
+      <input type="text" name="textfield5" id="textfield5" value="{{ data["purpose"] }}" />
+      </td>
+    </tr>
+        <tr>
+      <th>Description</th>
+      <td>
+      <input type="text" name="textfield6" id="textfield6" value="{{ data["description"] }}" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="Edit Charity" class="btn btn-success"/></td>
+    </tr>
+  </table>
+  </form>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'admin/aindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered table-hover" bgcolor="#222">
+    <tr>
+      <th>Sno</th>
+      <th>Name</th>
+      <th>Place</th>
+      <th>City</th>
+      <th>State</th>
+      <th>email</th>
+      <th>About us</th>
+      <th>estd</th>
+       <td></td>
+        <td></td>
+
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td height="100">&nbsp;{{ loop.index }}</td>
+      <td>{{ i['name'] }}</td>
+      <td>{{ i['place'] }}</td>
+      <td>&nbsp;{{ i['city'] }}</td>
+      <td>&nbsp;{{ i['state'] }}</td>
+      <td>&nbsp;{{ i['email'] }}</td>
+      <td>&nbsp;{{ i['aboutus'] }}</td>
+      <td>&nbsp;{{ i['estd'] }}</td>
+     <td>  <a href="/adminapprove_org/{{ i['organization_id'] }}" class="btn btn-primary" onclick="return confirm('are you sure?')">Approve</a>  </td>
+    <td>   <a href="/adminreject_org/{{ i['organization_id']  }}" class="btn btn-danger" onclick="return confirm('are you sure?')">Reject</a> </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

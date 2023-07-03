@@ -1,0 +1,28 @@
+{% extends 'admin/aindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/admin_donationrefundpost">
+  <table class="table table-bordered table-hover" bgcolor="#222">
+    <tr style="background-color: white;color: #0b2e13">
+      <th>Sl No.</th>
+      <th>Date Entry</th>
+      <th>Donated Amount</th>
+
+    </tr>
+
+      {% for i in ls %}
+    <tr>
+      <td >&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i['datea'] }}</td>
+      <td>&nbsp;{{ i['amounta'] }}</td>
+    </tr>
+      {% endfor %}
+  <tr>
+      <!--td colspan="1">Total Donations:{{ tot }}</td-->
+      <td colspan="1">Total Refund Amount</td>
+      <td>
+          <input type="text" name="textfield2" id="textfield2" class="form-control" required/></td></td>
+          <td><input type="submit" name="button" id="button" value="REFUND" class="btn btn-success"/></td>
+  </tr>
+  </table>
+</form>
+{% endblock %}

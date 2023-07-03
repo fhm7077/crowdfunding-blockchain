@@ -1,0 +1,25 @@
+{% extends 'admin/aindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+</form>
+<table class="table table-bordered table-hover" bgcolor="#222">
+  <tr>
+    <th>Sno</th>
+    <th> Date</th>
+    <th>Complaint</th>
+      <th>User info</th>
+    <th>Reply</th>
+    <th>Status</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td height="131">{{ loop.index }}</td>
+      <td>{{ i['date'] }}</td>
+    <td>{{ i['complaint'] }}</td>
+    <td>&nbsp;{{ i['name'] }}<br>{{ i['email'] }}</td>
+    <td>&nbsp;{% if i['status']=="pending" %}<a href="/sendreply/{{ i['comp_id'] }}">Reply</a>{% else %}{{ i['reply'] }}{% endif %} </td>
+    <td>{{ i['status'] }}</td>
+  </tr>
+    {% endfor %}
+</table>
+{% endblock %}

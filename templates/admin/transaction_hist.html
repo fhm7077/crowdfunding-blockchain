@@ -1,0 +1,22 @@
+{% extends 'admin/aindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered table-hover" bgcolor="#222">
+    <tr style="background-color: white;color: #0b2e13">
+      <th>Sl No.</th>
+      <th>Date Entry</th>
+      <th>Donated Amount</th>
+
+    </tr>
+
+      {% for i in ls %}
+    <tr>
+      <td height="143">&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i['datea'] }}</td>
+      <td>&nbsp;{{ i['amounta'] }}</td>
+    </tr>
+      {% endfor %}
+  <tr><td colspan="8">Total Donations:{{ tot }}</td></tr>
+  </table>
+</form>
+{% endblock %}
